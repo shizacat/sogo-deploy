@@ -19,3 +19,7 @@ Get image:
 ```bash
 docker pull shizacat/sogo
 ```
+
+## Configuration
+
+The file '/etc/sogo/sogo.conf' is stored main configuration.
