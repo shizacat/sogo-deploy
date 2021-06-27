@@ -1,7 +1,8 @@
 # Description
 
-Image for SoGo. 
-# Steps
+Image for SoGo.
+
+## Steps
 
 Repository project: https://github.com/inverse-inc/sogo
 
@@ -9,3 +10,12 @@ Repository project: https://github.com/inverse-inc/sogo
 - Example (works): https://github.com/cschweingruber/sogo-build
 - http://wiki.sogo.nu/nginxSettings
 - https://github.com/our-source/sogo
+
+
+# Usage
+
+Get image:
+
+```bash
+docker pull shizacat/sogo
+```
