@@ -1,6 +1,7 @@
 FROM ubuntu:20.04 as packages
 COPY build.sh ./
-RUN ./build.sh
+RUN ln -s /usr/bin/python3 /usr/bin/python && \
+    ./build.sh
 
 FROM ubuntu:20.04
 LABEL maintainer="a.matveev@centrofinans.ru"
