@@ -8,7 +8,7 @@ DEBFULLNAME="Christian Schweingruber"
 DEBEMAIL="c.schweingruber@catatec.ch"
 
 # Version of SOGo which will be built
-VERSION_TO_BUILD="5.4.0"
+VERSION_TO_BUILD="5.5.1"
 
 # Post config section
 # -------------------
