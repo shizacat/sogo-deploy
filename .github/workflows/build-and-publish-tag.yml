@@ -2,8 +2,7 @@ name: Build and Publish
 
 on:
   push:
-    branches: [main]
-    # tags:
+    tags:
 
 jobs:
   build-and-push-docker-image:
@@ -34,4 +33,4 @@ jobs:
         with:
           context: docker/
           push: true
-          tags: shizacat/sogo:${{ env.RELEASE_VERSION }}, shizacat/sogo:latest
+          tags: shizacat/sogo:${{ env.RELEASE_VERSION }}
