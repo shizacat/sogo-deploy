@@ -3,7 +3,7 @@ replicaCount: 1
 image:
   repository: shizacat/sogo
   pullPolicy: IfNotPresent
-  tag: "5.1.1"
+  tag: "5.2.0"
 
 imagePullSecrets: []
 nameOverride: ""
