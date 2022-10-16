@@ -86,6 +86,9 @@ dpkg -i libwbxml2-0_0.11.8-1_amd64.deb libwbxml2-dev_0.11.8-1_amd64.deb
 # Install any missing packages
 apt-get -f install -y
 
+# Fix python environment
+ln -s /usr/bin/python3.8 /usr/bin/python
+
 # Build section
 # -------------
 
