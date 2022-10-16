@@ -63,9 +63,6 @@ cd "${PACKAGES_DIR}"
 echo 'APT::Get::Install-Recommends "false";' >> /etc/apt/apt.conf
 echo 'APT::Get::Install-Suggests "false";' >> /etc/apt/apt.conf
 
-# Fix default python
-ln -s /usr/bin/python3 /usr/bin/python
-
 # Install required packages
 
 # shellcheck disable=SC2086
@@ -87,6 +84,9 @@ dpkg -i libwbxml2-0_0.11.8-1_amd64.deb libwbxml2-dev_0.11.8-1_amd64.deb
 
 # Install any missing packages
 apt-get -f install -y
+
+# Fix default python
+ln -s /usr/bin/python3 /usr/bin/python
 
 # Build section
 # -------------
