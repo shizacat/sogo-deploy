@@ -48,6 +48,7 @@ PACKAGES_TO_INSTALL="\
     libsodium-dev\
     libzip-dev\
     libmariadbclient-dev-compat\
+    libytnef0-dev\
 "
 # libpq-dev
 
