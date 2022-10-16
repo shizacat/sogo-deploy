@@ -8,7 +8,7 @@ DEBFULLNAME="Christian Schweingruber"
 DEBEMAIL="c.schweingruber@catatec.ch"
 
 # Version of SOGo which will be built
-VERSION_TO_BUILD="5.1.1"
+VERSION_TO_BUILD="5.2.0"
 
 # Post config section
 # -------------------
@@ -48,6 +48,7 @@ PACKAGES_TO_INSTALL="\
     libsodium-dev\
     libzip-dev\
     libmariadbclient-dev-compat\
+    libytnef0-dev\
 "
 # libpq-dev
 
@@ -84,6 +85,11 @@ dpkg -i libwbxml2-0_0.11.8-1_amd64.deb libwbxml2-dev_0.11.8-1_amd64.deb
 
 # Install any missing packages
 apt-get -f install -y
+
+# Fix python environment
+if [[ ! -h /usr/bin/python ]]; then
+    ln -s /usr/bin/python3.8 /usr/bin/python
+fi
 
 # Build section
 # -------------
