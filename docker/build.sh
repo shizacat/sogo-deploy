@@ -8,7 +8,7 @@ DEBFULLNAME="Christian Schweingruber"
 DEBEMAIL="c.schweingruber@catatec.ch"
 
 # Version of SOGo which will be built
-VERSION_TO_BUILD="5.1.1"
+VERSION_TO_BUILD="5.2.0"
 
 # Post config section
 # -------------------
@@ -62,6 +62,9 @@ cd "${PACKAGES_DIR}"
 # Do not install recommended or suggested packages
 echo 'APT::Get::Install-Recommends "false";' >> /etc/apt/apt.conf
 echo 'APT::Get::Install-Suggests "false";' >> /etc/apt/apt.conf
+
+# Fix default python
+ln -s /usr/bin/python3 /usr/bin/python
 
 # Install required packages
 
