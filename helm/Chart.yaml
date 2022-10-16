@@ -3,4 +3,4 @@ name: sogo
 description: SoGo - web interface for imap server.
 type: application
 version: 0.1.0
-appVersion: 5.0.1
+appVersion: 5.1.1
