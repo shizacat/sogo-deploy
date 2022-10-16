@@ -1,0 +1,57 @@
+replicaCount: 1
+
+image:
+  repository: shizacat/sogo
+  pullPolicy: IfNotPresent
+  tag: "latest"
+
+imagePullSecrets: []
+nameOverride: ""
+fullnameOverride: ""
+
+serviceAccount:
+  # Specifies whether a service account should be created
+  create: true
+  # Annotations to add to the service account
+  annotations: {}
+  # The name of the service account to use.
+  # If not set and create is true, a name is generated using the fullname template
+  name: ""
+
+service:
+  type: ClusterIP
+  port: 80
+
+ingress:
+  enabled: true
+  hosts:
+    sogo: sogo.domain
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    ingress.kubernetes.io/proxy-body-size: "100m"
+    nginx.ingress.kubernetes.io/proxy-body-size: 100m
+    nginx.ingress.kubernetes.io/proxy-read-timeout: "300"
+    # ingress.kubernetes.io/ssl-redirect: "true"
+    # nginx.ingress.kubernetes.io/ssl-redirect: "true"
+  tls:
+    # Enable the tls or not.
+    # Delete the "ssl-redirect" annotations in "ingress.annotations" when TLS is disabled
+    enabled: false
+    secret:
+      secretName: ""
+
+resources: {}
+  # We usually recommend not to specify default resources and to leave this as a conscious
+  # choice for the user. This also increases chances charts run on environments with little
+  # resources, such as Minikube. If you do want to specify resources, uncomment the following
+  # lines, adjust them as necessary, and remove the curly braces after 'resources:'.
+  # limits:
+  #   cpu: 100m
+  #   memory: 128Mi
+  # requests:
+  #   cpu: 100m
+  #   memory: 128Mi
+
+nodeSelector: {}
+
+affinity: {}

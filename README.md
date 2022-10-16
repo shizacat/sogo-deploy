@@ -1,10 +1,14 @@
 # Description
 
-Image for SoGo.
+Image and Helm for SoGo.
+
+Repository: https://github.com/shizacat/sogo
+
+# Docker
 
 ## Steps
 
-Repository project: https://github.com/inverse-inc/sogo
+Repository sogo project: https://github.com/inverse-inc/sogo
 
 - Instruction for build (don't work): https://sogo.nu/support/faq/how-do-i-compile-sogo.html
 - Example (works): https://github.com/cschweingruber/sogo-build
@@ -12,7 +16,7 @@ Repository project: https://github.com/inverse-inc/sogo
 - https://github.com/our-source/sogo
 
 
-# Usage
+## Usage
 
 Get image:
 
@@ -23,3 +27,5 @@ docker pull shizacat/sogo
 ## Configuration
 
 The file '/etc/sogo/sogo.conf' is stored main configuration.
+
+# Helm
