@@ -24,6 +24,11 @@ Get image:
 docker pull shizacat/sogo
 ```
 
+## Build
+
+```bash
+docker build -t sogo -f docker/Dockerfile docker
+
 ## Configuration
 
 The file '/etc/sogo/sogo.conf' is stored main configuration.
