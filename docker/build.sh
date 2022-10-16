@@ -77,10 +77,10 @@ apt-get -y install postgresql-server-dev-12 libpq-dev
 # Download and install libwbxml2 and libwbxml2-dev
 #wget -c https://packages.inverse.ca/SOGo/nightly/5/debian/pool/stretch/w/wbxml2/libwbxml2-dev_0.11.6-1_amd64.deb
 #wget -c https://packages.inverse.ca/SOGo/nightly/5/debian/pool/stretch/w/wbxml2/libwbxml2-0_0.11.6-1_amd64.deb
-wget --no-check-certificate -qc https://packages.inverse.ca/SOGo/nightly/5/ubuntu/pool/focal/w/wbxml2/libwbxml2-dev_0.11.6-1_amd64.deb
-wget --no-check-certificate -qc https://packages.inverse.ca/SOGo/nightly/5/ubuntu/pool/focal/w/wbxml2/libwbxml2-0_0.11.6-1_amd64.deb
+wget --no-check-certificate -qc https://packages.sogo.nu/nightly/5/ubuntu/pool/focal/w/wbxml2/libwbxml2-dev_0.11.8-1_amd64.deb
+wget --no-check-certificate -qc https://packages.sogo.nu/nightly/5/ubuntu/pool/focal/w/wbxml2/libwbxml2-0_0.11.8-1_amd64.deb
 
-dpkg -i libwbxml2-0_0.11.6-1_amd64.deb libwbxml2-dev_0.11.6-1_amd64.deb
+dpkg -i libwbxml2-0_0.11.8-1_amd64.deb libwbxml2-dev_0.11.8-1_amd64.deb
 
 # Install any missing packages
 apt-get -f install -y
