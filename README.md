@@ -34,3 +34,4 @@ docker build -t sogo -f docker/Dockerfile docker
 The file '/etc/sogo/sogo.conf' is stored main configuration.
 
 # Helm
+```
