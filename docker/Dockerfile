@@ -4,7 +4,7 @@ RUN ln -s /usr/bin/python3 /usr/bin/python && \
     ./build.sh
 
 FROM ubuntu:20.04
-LABEL maintainer="a.matveev@centrofinans.ru"
+LABEL maintainer="tippet@yandex.ru"
 # based on https://github.com/JensErat/docker-sogo
 # repo from http://www.axis.cz/linux/debian/dists
 

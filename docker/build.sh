@@ -8,7 +8,7 @@ DEBFULLNAME="Christian Schweingruber"
 DEBEMAIL="c.schweingruber@catatec.ch"
 
 # Version of SOGo which will be built
-VERSION_TO_BUILD="5.7.1"
+VERSION_TO_BUILD="5.8.4"
 
 # Post config section
 # -------------------
@@ -69,17 +69,20 @@ echo 'APT::Get::Install-Suggests "false";' >> /etc/apt/apt.conf
 # shellcheck disable=SC2086
 apt-get update && apt-get install -y $PACKAGES_TO_INSTALL
 
-# Library - PostgreSQL 12
+# Library - PostgreSQL 16
 echo "deb http://apt.postgresql.org/pub/repos/apt focal-pgdg main" > /etc/apt/sources.list.d/pgdg.list
 wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | apt-key add -
 apt-get update 
-apt-get -y install postgresql-server-dev-12 libpq-dev
+apt-get -y install postgresql-server-dev-16 libpq-dev
 
 # Download and install libwbxml2 and libwbxml2-dev
 #wget -c https://packages.inverse.ca/SOGo/nightly/5/debian/pool/stretch/w/wbxml2/libwbxml2-dev_0.11.6-1_amd64.deb
 #wget -c https://packages.inverse.ca/SOGo/nightly/5/debian/pool/stretch/w/wbxml2/libwbxml2-0_0.11.6-1_amd64.deb
 wget --no-check-certificate -qc https://packages.sogo.nu/nightly/5/ubuntu/pool/focal/w/wbxml2/libwbxml2-dev_0.11.8-1_amd64.deb
 wget --no-check-certificate -qc https://packages.sogo.nu/nightly/5/ubuntu/pool/focal/w/wbxml2/libwbxml2-0_0.11.8-1_amd64.deb
+# Ubuntu 22.04
+# https://packages.sogo.nu/nightly/5/ubuntu/pool/jammy/w/wbxml2/libwbxml2-dev_0.11.8-1_amd64.deb
+# https://packages.sogo.nu/nightly/5/ubuntu/pool/jammy/w/wbxml2/libwbxml2-0_0.11.8-1_amd64.deb
 
 dpkg -i libwbxml2-0_0.11.8-1_amd64.deb libwbxml2-dev_0.11.8-1_amd64.deb
 
